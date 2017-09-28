@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Job.cs" />
-    <Compile Include="Runners\WinCmdExecutor.cs" />
+    <Compile Include="Executors\WinCmdExecutor.cs" />
     <Compile Include="SimpleAction.cs" />
     <Compile Include="IAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

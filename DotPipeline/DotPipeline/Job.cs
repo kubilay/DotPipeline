@@ -1,32 +1,29 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DotPipeline
 {
-    public class Job : List<IAction>
+    public class Job : List<IAction>, IAction
     {
         public Job() : base()
         {
 
         }
 
-        public bool Process()
+        bool result;
+
+        public bool Result { get => result; private set => result = value; }
+
+        public void Run()
         {
-            bool retVal = true;
             foreach (IAction action in this)
             {
                 action.Run();
                 if (!action.Result)
                 {
-                    retVal = false;
+                    result = false;
                     break;
                 }
             }
-            return retVal;
         }
     }
 }
