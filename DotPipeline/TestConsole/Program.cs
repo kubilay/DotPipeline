@@ -6,12 +6,7 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            IAction job = new Job
-            {
-                new SimpleAction(() => { return true; }),
-                new WinCmdAction("exit /b 0")
-            };
-            job.Run();
+
         }
     }
 }

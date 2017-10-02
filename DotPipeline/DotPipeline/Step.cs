@@ -2,9 +2,9 @@
 
 namespace DotPipeline
 {
-    public class Job : List<IAction>, IAction
+    public class Step : List<IAction>, IAction
     {
-        public Job() : base()
+        public Step() : base()
         {
 
         }
