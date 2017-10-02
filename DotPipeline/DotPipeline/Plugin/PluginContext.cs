@@ -47,10 +47,11 @@ namespace DotPipeline.Plugin
         {
             if (!registeredPlugins.ContainsKey(name))
                 throw new PluginNotRegisteredException("The plugin is not found in the plugin registry.");
+
             if (!registeredCommands[name].ContainsKey(command))
                 throw new PluginCommandNotAvailableException("The plugin does not expose any method as expected for the given name.");
 
-            if (CheckMethodParameterTypes(registeredCommands[name][command], args))
+            if (!CheckMethodParameterTypes(registeredCommands[name][command], args))
                 throw new PluginCommandArgumentException("The plugin does not contain any exposed commands for the given signature.");
 
             IPlugin plugin = InvokeConstructor(registeredPlugins[name]);
