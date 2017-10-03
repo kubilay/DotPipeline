@@ -22,7 +22,7 @@ namespace DotPipeline
 
         public void Run()
         {
-            result = PluginContext.Invoke(Name, Settings, Command, Args);
+            //result = PluginContext.Invoke(Name, Settings, Command, Args);
         }
     }
 }

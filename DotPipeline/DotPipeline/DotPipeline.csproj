@@ -41,10 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pipeline.cs" />
+    <Compile Include="Plugin\PluginAttribute.cs" />
+    <Compile Include="Plugin\PluginMethodInfo.cs" />
     <Compile Include="Plugin\PluginCommandArgumentException.cs" />
     <Compile Include="Plugin\PluginCommandAttribute.cs" />
     <Compile Include="Plugin\PluginCommandNotAvailableException.cs" />
+    <Compile Include="Plugin\PluginInfo.cs" />
+    <Compile Include="Plugin\PluginNameNotDefinedException.cs" />
     <Compile Include="Plugin\PluginNotRegisteredException.cs" />
+    <Compile Include="Plugin\PluginPublishesAttribute.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Step.cs" />
     <Compile Include="Executors\WinCmdExecutor.cs" />

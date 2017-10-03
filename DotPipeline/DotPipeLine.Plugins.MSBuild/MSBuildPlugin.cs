@@ -19,10 +19,10 @@ namespace DotPipeLine.Plugins.MSBuild
             
         }
 
-        [PluginCommand(Name = "Build")]
-        public bool Build()
+        [PluginCommand("Build")]
+        public PluginResult Build()
         {
-            return true;
+            return new PluginResult() { Success = true };
         }
     }
 }

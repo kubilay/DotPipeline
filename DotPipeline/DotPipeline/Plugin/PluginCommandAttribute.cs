@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace DotPipeline.Plugin
 {
-    public class PluginCommandAttribute : Attribute
+    [System.AttributeUsage(AttributeTargets.Method, Inherited = false, AllowMultiple = false)]
+    public sealed class PluginCommandAttribute : Attribute
     {
-        public string Name { get; set; }
-        public  PluginCommandAttribute()
+        readonly string name;
+
+        public PluginCommandAttribute(string name)
         {
+            this.name = name;
         }
+
+        public string Name { get => name; }
     }
 }
